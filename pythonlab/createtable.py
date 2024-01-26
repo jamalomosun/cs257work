@@ -24,8 +24,8 @@ def create_tables():
     cur = conn.cursor();
 
 
-    commands = (
-        """
+    commands = '''
+        
         CREATE TABLE cities (
             City text
             State text
@@ -33,14 +33,13 @@ def create_tables():
             Latitutde real
             Longitude real
         );
-        """,
-        """
+    
         CREATE TABLE states (
             State text
             Abbreviations text
         );
-        """
-    )
+        '''
+    
 
     cur.execute(commands);
 
