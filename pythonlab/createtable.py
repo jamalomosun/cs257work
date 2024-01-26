@@ -28,17 +28,17 @@ def create_tables():
         
         DROP TABLE IF EXISTS cities;
         CREATE TABLE cities (
-            City text,
-            State text,
-            Population int,
-            Latitutde real,
-            Longitude real
+            city text,
+            state text,
+            population int,
+            latitutde real,
+            longitude real
         );
     
         DROP TABLE IF EXISTS states;
         CREATE TABLE states (
-            State text,
-            Abbreviations text
+            state text,
+            abbreviations text
         );
         '''
     
