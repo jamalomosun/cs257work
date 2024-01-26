@@ -26,7 +26,8 @@ def create_tables():
 
     commands = '''
         
-        DROP TABLE IF EXISTS cities (
+        DROP TABLE IF EXISTS cities;
+        CREATE TABLE cities (
             City text,
             State text,
             Population int,
@@ -34,7 +35,8 @@ def create_tables():
             Longitude real
         );
     
-        DROP TABLE IF EXISTS states (
+        DROP TABLE IF EXISTS states;
+        CREATE TABLE states (
             State text,
             Abbreviations text
         );
