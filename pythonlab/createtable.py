@@ -14,7 +14,7 @@ def connection():
     else:
         print( "Problem with Connection" )
 
-    return None
+    return conn;
 
     
 
