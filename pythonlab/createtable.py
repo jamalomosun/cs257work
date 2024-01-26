@@ -32,13 +32,13 @@ def create_tables():
             Population integer
             Latitutde real
             Longitude real
-        )
+        );
         """,
         """
         CREATE TABLE states (
             State text
             Abbreviations text
-        )
+        );
         """
     )
 
