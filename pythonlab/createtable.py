@@ -27,15 +27,15 @@ def create_tables():
     commands = '''
         
         CREATE TABLE cities (
-            City text
-            State text
-            Population integer
-            Latitutde real
+            City text,
+            State text,
+            Population integer,
+            Latitutde real,
             Longitude real
         );
     
         CREATE TABLE states (
-            State text
+            State text,
             Abbreviations text
         );
         '''
