@@ -61,7 +61,7 @@ def citySearch():
         cur.execute("SELECT city, population, latitude, longitude FROM cities WHERE city = 'Northfield'; ")
         result = cur.fetchone()
 
-        if print(result) == "None":
+        if result == None:
             print("Northfield is not in the database")
 
         print("Print out the name of the city with the largest population.")
