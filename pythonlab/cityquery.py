@@ -60,6 +60,7 @@ def citySearch():
         print("Determine if Northfield is present in the database. If it is, print its location (Latitude and Longitude). If it is not, print an appropriate message for the user.")
         cur.execute("SELECT city, population, latitude, longitude FROM cities WHERE city = 'Northfield'; ")
         result = cur.fetchone()
+        print(result)
 
         print("Print out the name of the city with the largest population.")
         cur.execute("SELECT MAX(population) AS maxPop FROM cities; ")
