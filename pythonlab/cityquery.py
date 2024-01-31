@@ -65,23 +65,35 @@ def citySearch():
         print("Print out the name of the city with the largest population.")
         cur.execute("SELECT city FROM cities ORDER BY population DESC; ")
         result = cur.fetchone()
+        print(result)
+        print()
 
         print("Print out the name of the city in Minnesota with the smallest population.")
         cur.execute("SELECT city, state FROM cities WHERE state = 'Minnesota' ORDER BY population;")
         result = cur.fetchone()
+        print(result)
+        print()
 
         print("Print out the names of the cities that is furthest North, furthest East, furthest South, and furthest West")
         cur.execute("SELECT city FROM cities ORDER BY latitude;")
         result = cur.fetchone()
+        print(result)
+        print()
 
         cur.execute("SELECT city FROM cities ORDER BY latitude DESC;")
         result = cur.fetchone()
-
+        print(result)
+        print()
+        
         cur.execute("SELECT city FROM cities ORDER BY longitude;")
         result = cur.fetchone()
+        print(result)
+        print()
 
         cur.execute("SELECT city FROM cities ORDER BY longitude DESC;")
         result = cur.fetchone()
+        print(result)
+        print()
 
         print("Have the user enter a State from the keyboard. Print the Total population of all the cities in that state. The user should be able to enter either an abbreviation or the full name of the sate. If the user enters an abbreviation, then you should look up the abbreviation in the second table to learn the full name of the state.")
         stateInput = input("Please enter a state or abbreviation: ")
