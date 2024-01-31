@@ -54,7 +54,7 @@ def create_tables():
 
 def citySearch():
     conn = connection()
-    if conn == True:
+    if conn is not None:
         conn = connection()
         cur = conn.cursor()
         print("Determine if Northfield is present in the database. If it is, print its location (Latitude and Longitude). If it is not, print an appropriate message for the user.")
