@@ -47,9 +47,6 @@ def create_tables():
 
     conn.commit();
 
-    print("W")
-
-
     print();
 
 def main():
