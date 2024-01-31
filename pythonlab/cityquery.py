@@ -62,7 +62,8 @@ def citySearch():
         result = cur.fetchone()
 
         print("Print out the name of the city with the largest population.")
-        cur.execute("SELECT city, MAX(population) FROM cities; ")
+        cur.execute("SELECT MAX(population) AS maxPop FROM cities; ")
+        cur.execute("SELECT city FROM cities WHERE population = maxPop; ")
         result = cur.fetchone()
 
         print("Print out the name of the city in Minnesota with the smallest population.")
