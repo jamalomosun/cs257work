@@ -52,11 +52,7 @@ def create_tables():
 
     print();
 
-def main():
-
-    connection()
-    create_tables()
-
+def citySearch():
     conn = connection()
     if conn == True:
         conn = connection()
@@ -105,6 +101,14 @@ def main():
 
         cur.execute(sql)
         result = cur.fetchall()
+
+def main():
+
+    connection()
+    create_tables()
+    citySearch()
+
+    
 
 
 
