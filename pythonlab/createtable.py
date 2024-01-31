@@ -31,7 +31,7 @@ def create_tables():
             city text,
             state text,
             population int,
-            latitute real,
+            latitude real,
             longitude real
         );
     
