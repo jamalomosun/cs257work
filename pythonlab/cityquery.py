@@ -87,11 +87,7 @@ def citySearch():
 
         cur.execute(sql)
         result = cur.fetchall()
-
-        if result == None:
-            print("You entered an invalid input")
-        else:
-            print(result)
+        print(result)
 
 def main():
 
