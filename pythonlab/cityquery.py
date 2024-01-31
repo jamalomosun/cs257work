@@ -123,7 +123,7 @@ def citySearch():
 def main():
 
     connection()
-    create_tables()
+    #create_tables()
     citySearch()
 
     
