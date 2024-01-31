@@ -90,7 +90,7 @@ def citySearch():
         result = cur.fetchone()
 
         print("Have the user enter a State from the keyboard. Print the Total population of all the cities in that state. The user should be able to enter either an abbreviation or the full name of the sate. If the user enters an abbreviation, then you should look up the abbreviation in the second table to learn the full name of the state.")
-        stateInput = input("Please enter a state or abbreviation")
+        stateInput = input("Please enter a state or abbreviation: ")
 
         if len(stateInput) == 2:
             stateInput = stateInput.upper()
