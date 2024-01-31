@@ -16,38 +16,6 @@ def connection():
 
     return conn;
 
-    
-
-def create_tables():
-    conn = connection();
-
-    cur = conn.cursor();
-
-
-    commands = '''
-        
-        DROP TABLE IF EXISTS cities;
-        CREATE TABLE cities (
-            city text,
-            state text,
-            population int,
-            latitude real,
-            longitude real
-        );
-    
-        DROP TABLE IF EXISTS states;
-        CREATE TABLE states (
-            state text,
-            abbreviations text
-        );
-        '''
-    
-
-    cur.execute(commands);
-
-    conn.commit();
-
-    print();
 
 def citySearch():
     conn = connection()
@@ -123,7 +91,6 @@ def citySearch():
 def main():
 
     connection()
-    #create_tables()
     citySearch()
 
     
