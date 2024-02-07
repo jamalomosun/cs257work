@@ -38,7 +38,20 @@ def my_sum(num1, num2):
 def my_pop(abbrev):
     my_abbreviation - abbrev
     cur = conn.cursor()
-    cur.execute()
+    commands = '''
+        
+        DROP TABLE IF EXISTS statepop;
+        CREATE TABLE statepop (
+            code text,
+            state text,
+            pop int,
+        );
+        '''
+    flaskdb = '''SELECT * FROM statepop WHERE '%s' = code ''' %(abbrev)
+    cur.execute(commands)
+    cur.execute(flaskdb)
+    result = cur.fetchall()
+    return (str(result))
 
 if __name__ == '__main__':
     my_port = 5130
