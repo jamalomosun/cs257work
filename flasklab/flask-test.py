@@ -1,6 +1,16 @@
 import flask
+import psycopg2;
+
 
 app = flask.Flask(__name__)
+
+conn = psycopg2.connect(
+    host="localhost",
+    port=5432,
+    database="omosunj",
+    user="omosunj",
+    password="nose648ruby"
+)
 
 #
 @app.route('/hello')
@@ -24,6 +34,11 @@ def my_sum(num1, num2):
     sumNum = str(sumNum)
     return sumNum
 
+@app.route('/pop/<abb1>')
+def my_pop(abbrev):
+    my_abbreviation - abbrev
+    cur = conn.cursor()
+    cur.execute()
 
 if __name__ == '__main__':
     my_port = 5130
