@@ -14,7 +14,14 @@ def my_display(word1, word2):
 
 @app.route('/color/<word1>')
 def my_color(word1):
-    return '<h1 style="color:Red">' + word1 + '</h1>'
+    return '<h1 style="color:Green">' + word1 + '</h1>'
+
+@app.route('/add/<num1>/<num2>')
+def my_sum(num1, num2):
+    num1 = int(num1)
+    num2 = int(num2)
+    return num1 + num2
+
 
 if __name__ == '__main__':
     my_port = 5130
