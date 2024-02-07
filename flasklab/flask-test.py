@@ -20,7 +20,9 @@ def my_color(word1):
 def my_sum(num1, num2):
     num1 = int(num1)
     num2 = int(num2)
-    return num1 + num2
+    sumNum = num1 + num2
+    sumNum = str(sumNum)
+    return sumNum
 
 
 if __name__ == '__main__':
