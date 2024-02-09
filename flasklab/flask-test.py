@@ -45,9 +45,10 @@ def my_pop(abbrev):
             code text,
             state text,
             pop int,
-        );
+        ) as state_pop;
+
         '''
-    flaskdb = '''SELECT * FROM statepop WHERE '%s' = code ''' %(my_abbreviation)
+    flaskdb = '''SELECT * FROM state_pop WHERE '%s' = code ''' %(my_abbreviation)
     cur.execute(commands);
     cur.execute(flaskdb);
     result = cur.fetchall()
