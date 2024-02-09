@@ -34,7 +34,7 @@ def my_sum(num1, num2):
     sumNum = str(sumNum)
     return sumNum
 
-@app.route('/pop/<abb1>')
+@app.route('/pop/<abbrev>')
 def my_pop(abbrev):
     my_abbreviation - abbrev
     cur = conn.cursor()
