@@ -19,6 +19,7 @@ def name():
     year = random.randint(1940,2022)
 
     story = listOfNames[num] + "the" + listOfAdjectives[num2] + "was born in [blank] in " + str(year)
+    return story;
 
 
 
