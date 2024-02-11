@@ -38,18 +38,7 @@ def my_sum(num1, num2):
 def my_pop(abbrev):
     my_abbreviation = abbrev
     cur = conn.cursor()
-    commands = '''
-        
-        DROP TABLE IF EXISTS statepop;
-        CREATE TABLE statepop (
-            code text,
-            state text,
-            pop int,
-        ) as state_pop;
-
-        '''
-    flaskdb = '''SELECT * FROM state_pop WHERE '%s' = code ''' %(my_abbreviation)
-    cur.execute(commands);
+    flaskdb = '''SELECT * FROM statepop WHERE '%s' = code ''' %(my_abbreviation)
     cur.execute(flaskdb);
     result = cur.fetchall()
     return (str(result))
