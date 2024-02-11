@@ -6,7 +6,21 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return render_template("index.html")
+    #return render_template("index.html")
+    return render_template("storygen.html")
+
+@app.route('/test')
+def name():
+    listOfNames = ["Alice","Bob", "Jessica", "James", "Jack", "Zoe"]
+    listOfAdjectives = ["Wise", "Foolish", "Proud", "Accomplished", "Shameless", "Brave"]
+    
+    num = random.randint(0, 6) 
+    num2 = random.randint(0, 6)
+    year = random.randint(1940,2022)
+
+    story = listOfNames[num] + "the" + listOfAdjectives[num2] + "was born in [blank] in " + str(year)
+
+
 
 @app.route('/rand/<low>/<high>')
 def rand(low, high):
