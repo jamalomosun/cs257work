@@ -5,10 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    message = "Welcome to My Example Webpage."
-    message = message + " This text was produced by concatenating strings in Python!"
-    #return render_template("homepage.html", someText = message)
-    return render_template("sleepy.html", messText= message)
+    message = "Welcome good sir. It is time to go to sleep now."
+    return render_template("homepage.html", someText = message)
 
 
 @app.route('/Hello')
