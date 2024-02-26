@@ -11,3 +11,8 @@
   .big-button{
     font-size: large;
   }
+
+  .another-class{
+    background-color: white;
+    color: black;
+  }
